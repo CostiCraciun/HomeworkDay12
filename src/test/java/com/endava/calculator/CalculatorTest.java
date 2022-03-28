@@ -107,7 +107,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldAddNoOperands(long expected) {
+    public void shouldAddNoOperands() {
 
         //GIVEN
 //        BasicOperations basicCalculator = new Basic();
@@ -116,7 +116,7 @@ public class CalculatorTest {
         long result = basicCalculator.add();
 
         //THEN
-        assertThat(result, is(expected));
+        assertThat(result, is(0L));
     }
 
     @Test
@@ -129,7 +129,7 @@ public class CalculatorTest {
         long result = basicCalculator.add(167);
 
         //THEN
-        assertThat(result, is(167));
+        assertThat(result, is(167L));
     }
 
     @ParameterizedTest
@@ -157,7 +157,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply();
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(0L));
     }
 
     @Test
@@ -170,7 +170,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply(115);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(115L));
     }
 
     @Test
@@ -182,7 +182,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply(3, 4);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(12L));
     }
 
     @Test
@@ -195,7 +195,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply(2, 3, 4, 5);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(120L));
     }
 
     @Test
@@ -208,7 +208,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply(-2, -4);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(8L));
     }
 
     @Test
@@ -221,7 +221,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply(Integer.MAX_VALUE, 30L);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(Integer.MAX_VALUE * 30L));
     }
 
     @Test
@@ -234,7 +234,7 @@ public class CalculatorTest {
         long result = basicCalculator.multiply(0, 7);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(0L));
     }
 
     @Test
@@ -247,7 +247,7 @@ public class CalculatorTest {
         double result = expertCalculator.pow(2, 5);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(32.0));
     }
 
     @Test
@@ -260,7 +260,7 @@ public class CalculatorTest {
         double result = expertCalculator.pow(2, 0);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(1.0));
     }
 
     @Test
@@ -273,7 +273,7 @@ public class CalculatorTest {
         double result = expertCalculator.pow(-2, -3);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(-0.125));
     }
 
     @Test
@@ -286,7 +286,7 @@ public class CalculatorTest {
         double result = expertCalculator.pow(0, 4);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(0.0));
     }
 
     @Test
@@ -299,7 +299,7 @@ public class CalculatorTest {
         double result = expertCalculator.pow(2, -3);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(0.125));
     }
 
     @Test
@@ -312,7 +312,7 @@ public class CalculatorTest {
         double result = expertCalculator.pow(145, 6);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(9294114390625.0));
     }
 
     @Test
@@ -325,7 +325,7 @@ public class CalculatorTest {
         double result = expertCalculator.fact(4);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(24.0));
     }
 
     @Test
@@ -338,7 +338,7 @@ public class CalculatorTest {
         double result = expertCalculator.fact(-4);
 
         //THEN
-        System.out.println(result);
+
     }
 
     @Test
@@ -351,7 +351,7 @@ public class CalculatorTest {
         double result = expertCalculator.fact(0);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(1.0));
     }
 
     @Test
@@ -364,6 +364,6 @@ public class CalculatorTest {
         double result = expertCalculator.fact(31);
 
         //THEN
-        System.out.println(result);
+        assertThat(result, is(7.38197504E8));
     }
 }

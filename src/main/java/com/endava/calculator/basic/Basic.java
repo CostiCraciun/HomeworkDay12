@@ -68,29 +68,44 @@ public class Basic implements BasicOperations {
 
     @Override
     public long multiply(int... no) {
-        int result = 1;
-        for(int i = 0; i < no.length; i++) {
-            result = result * no[i];
+        int result;
+        if(no.length == 0) {
+            result = 0;
+        } else {
+            result = 1;
+            for(int i = 0; i < no.length; i++) {
+                result = result * no[i];
+            }
         }
         return result;
     }
 
     @Override
     public long multiply(long... no) {
-        long result = 1;
-        for(int i = 0; i < no.length; i++) {
-            result = result * no[i];
+        long result;
+        if(no.length == 0) {
+            result = 0;
+        } else {
+            result = 1;
+            for(int i = 0; i < no.length; i++) {
+                result = result * no[i];
+            }
         }
         return result;
     }
 
     @Override
     public double multiply(double... no) {
-        double result = 1;
-        for(int i =0; i < no.length; i++) {
-            result = result * no[i];
+        double result;
+        if(no.length == 0) {
+            result = 0;
+        } else {
+            result = 1;
+            for(int i = 0; i < no.length; i++) {
+                result = result * no[i];
+            }
         }
-        return formatNumber(result);
+        return result;
     }
 
     @Override
